@@ -1,0 +1,18 @@
+# ~/.tmuxinator/email_env_setup.yml
+
+name: email_env_tmux
+windows:
+  - btop:
+      layout: even-vertical
+      panes:
+        - btop
+  - nvtop:
+      layout: even-vertical
+      panes:
+        - nvtop
+  - coding:
+      layout: even-horizontal
+      panes:
+        - conda activate emailenv && nvim
+        - conda activate emailenv && ipython && %autoindent
+
